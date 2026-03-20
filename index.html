@@ -1,12 +1,351 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hilal Nur Gedikli</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Creative + Developer</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Oswald:wght@700&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <div id="app">
+    <header id="main-header">
+      <div class="logo">|||||</div>
+      <nav class="menu-container">
+        <a href="#app">HOME</a>
+        <a href="#deneyimler">EXPERIENCE</a>
+        <a href="#projeler">PROJECTS</a>
+        <a href="#sertifikalar">CERTIFICATES</a>
+        <a href="#hobiler">HOBBIES</a>
+        <a href="#iletisim">CONTACT</a>
+      </nav>
+      <div class="header-right">
+        <!-- Space for balance if needed -->
+      </div>
+    </header>
+
+    <div class="scroll-container">
+      <section class="hero">
+        <!-- MAIN KISMI: Sayfanın ana içeriği. Sadeleştirilmiş tasarım. -->
+        <main class="hero-main">
+          <div class="hero-image-container">
+            <img src="/profile.png" alt="Hilal Nur Gedikli" class="profile-img" />
+          </div>
+          <div class="hero-text-container">
+            <h1 class="hero-name">HİLAL NUR GEDİKLİ</h1>
+            <div class="hero-intro">
+               <p>I’m a 3rd-year Computer Engineering student at Yıldız Technical University with a passion for building scalable systems and intelligent applications. My goal is to continuously improve myself and tackle problems from distinct perspectives.</p>
+               <p>Actively exploring new technologies, I focus on turning knowledge into real, working systems—especially within backend development, distributed systems, and AI.</p>
+               <p>Beyond tech, I’m a licensed ice hockey player. The discipline, teamwork, and resilience I've learned on the ice directly shape my engineering mindset.</p>
+            </div>
+          </div>
+        </main>
+      </section>
+
+      <!-- DENEYİMLER BÖLÜMÜ (Mükemmel Geçiş İçin Clip-Path) -->
+      <section class="experiences" id="deneyimler">
+        <div class="experiences-content">
+          <h2 class="experiences-title">DENEYİMLER</h2>
+          
+          <!-- Yeni Eklenen Deneyim Detayları -->
+          <div class="experiences-details">
+
+            <div class="experience-list">
+              
+              <!-- Turkcell -->
+              <div class="experience-item" id="exp-turkcell">
+                <h4>Intern – Turkcell</h4>
+                <span class="experience-date">(Jan – Feb 2026)</span>
+                <ul>
+                  <li><strong>Architecture Evolution (Sync to Async):</strong> Designed and developed an internal Spring Boot service from scratch based on provided API specifications, enabling REST-based communication with the BiP TES infrastructure; migrated the system to an asynchronous architecture to eliminate bottlenecks under high message load.</li>
+                  <li><strong>Concurrency & Architectural Patterns:</strong> Built an asynchronous processing flow using Java thread pools (ExecutorService); applied producer–consumer patterns inspired by Kafka to simulate queue-based handling and maximize throughput. Gained conceptual knowledge of Redis, focusing on its role in system decoupling and caching within high-throughput systems.</li>
+                  <li><strong>Scalable Data & Persistence:</strong> Designed data persistence using PostgreSQL and optimized large-scale message storage through table partitioning to support high-volume traffic and efficient querying.</li>
+                  <li><strong>System Integration & Robustness:</strong> Implemented polymorphic DTO structures to support multiple payload types (e.g., multimedia, location) while maintaining strict API contract compliance across the BiP messaging ecosystem.</li>
+                </ul>
+              </div>
+
+              <!-- NSCC -->
+              <div class="experience-item" id="exp-uysm">
+                <h4>Intern – National Software Certification Center</h4>
+                <span class="experience-date">(Sep – Nov 2025)</span>
+                <ul>
+                  <li><strong>Machine Learning & Feature Engineering:</strong> Developed Random Forest and MLP regression models to predict NaCl and MgSO₄ concentrations in ppm. Performed feature engineering on multidimensional impedance data, including data cleaning, statistical feature extraction, and model evaluation.</li>
+                  <li><strong>Backend Development:</strong> Built data processing and model prediction modules using object-oriented programming principles in Python. Updated the database schema for new modules and created independent API layers for data processing, model training, and inference to ensure modularity.</li>
+                  <li><strong>Docker & Service Integration:</strong> Configured all project services within a Docker Compose environment. Observed inter-service dependencies, network configurations, and shared data volumes.</li>
+                </ul>
+              </div>
+
+              <!-- Google -->
+              <div class="experience-item" id="exp-google">
+                <h4>Trainee – Google Artificial Intelligence and Technology Academy</h4>
+                <span class="experience-date">(Dec 2024 – Feb 2025)</span>
+                <ul>
+                  <li><strong>AI-Powered Web Applications:</strong> Developed modern web applications by integrating LLM-based solutions with high performance backends built on FastAPI, Pydantic, and Alembic.</li>
+                  <li><strong>Project Management:</strong> Studying Agile and Waterfall methodologies comparatively and analyzing the project management lifecycle. Analyzing the impact of organizational structure and culture on project management.</li>
+                </ul>
+              </div>
+
+            </div> <!-- experience-list -->
+          </div> <!-- experiences-details -->
+
+        </div> <!-- experiences-content -->
+      </section>
+      
+      <!-- PROJELER BÖLÜMÜ (Yeni Eklenen) -->
+      <section class="projects" id="projeler">
+        <div class="projects-content">
+          <h2 class="projects-title">PROJECTS</h2>
+          <div class="projects-wrapper">
+            
+            <div class="project-card">
+              <h3>LLM-Based E-Commerce Trust Analyzer & Chrome Extension</h3>
+              <p>Developed an end-to-end system that automatically evaluates the reliability of e-commerce websites using LLM-powered data analysis.</p>
+              <h4>Key Features</h4>
+              <ul>
+                <li>Collected data via web scraping from Şikayetvar, Twitter, and ETBİS</li>
+                <li>Performed sentiment and content analysis using NLP and LLM (Gemini API)</li>
+                <li>Generated dynamic trust scores for e-commerce platforms</li>
+                <li>Delivered results to end-users via a Chrome Extension in real-time</li>
+              </ul>
+              <h4>Technologies</h4>
+              <p>FastAPI, Python, Web Scraping, Gemini API, NLP, REST API, Chrome Extension</p>
+            </div>
+
+            <div class="project-card">
+              <h3>Multi-User Cite Management System (Django)</h3>
+              <p>Contributed as a core team member in the development of a modular and scalable CMS supporting multiple user roles.</p>
+              <h4>Key Features & Achievements</h4>
+              <ul>
+                <li>Role-Based Access Control (RBAC) with 3 user types</li>
+                <li>Scalable backend architecture</li>
+                <li>Designed backend system structure</li>
+                <li>Applied object-oriented architecture principles</li>
+                <li>Gained hands-on experience in collaborative development</li>
+              </ul>
+              <h4>Technologies</h4>
+              <p>Django, Python, MVC Architecture</p>
+            </div>
+
+            <div class="project-card">
+              <h3>Airline Reservation & Management System</h3>
+              <p>Built a comprehensive system simulating real-world airline operations and reservation workflows.</p>
+              <h4>Key Features</h4>
+              <ul>
+                <li>Concurrent reservation handling using multithreading</li>
+                <li>Implementation of core OOP principles (Encapsulation, Inheritance, Polymorphism, Abstraction)</li>
+                <li>System validation through unit testing</li>
+              </ul>
+              <h4>Technologies</h4>
+              <p>Java, OOP, Multithreading, Unit Testing</p>
+            </div>
+
+            <div class="project-card">
+              <h3>ML-Based Liquid Quality Prediction System</h3>
+              <p>Developed machine learning models to predict quality parameters of different liquid solutions.</p>
+              <h4>Key Features</h4>
+              <ul>
+                <li>Trained and compared Random Forest and MLP regression models</li>
+                <li>Predicted ppm values for NaCl and MgSO₄ solutions</li>
+                <li>Performed data preprocessing, model training, and performance evaluation</li>
+              </ul>
+              <h4>Technologies</h4>
+              <p>Python, Scikit-learn, TensorFlow, Pandas, NumPy</p>
+            </div>
+
+            <div class="project-card">
+              <h3>High-Throughput Messaging Service (Turkcell)</h3>
+              <p>Designed and developed a scalable backend service to handle high-volume messaging workflows within a telecom infrastructure.</p>
+              <h4>Key Features & Scalability</h4>
+              <ul>
+                <li>Built an async Spring Boot service integrating REST with BiP infrastructure</li>
+                <li>Implemented ExecutorService and Kafka-inspired patterns for high throughput</li>
+                <li>Optimized data storage using PostgreSQL table partitioning</li>
+                <li>Designed polymorphic DTO structures for versatile payload handling</li>
+              </ul>
+              <h4>Technologies</h4>
+              <p>Java, Spring Boot, REST API, Multithreading, PostgreSQL</p>
+            </div>
+
+          </div>
+        </div>
+      </section>
+      <!-- CERTIFICATES BÖLÜMÜ (Yeni Eklenen) -->
+      <section class="certificates" id="sertifikalar">
+        <div class="certificates-content">
+          <div class="certificates-list">
+            
+            <div class="certificate-item">
+              <div class="cert-header">
+                <h3>BTK 2025 AI Hackathon</h3>
+                <span class="cert-issuer">BTK Akademi</span>
+              </div>
+              <div class="cert-details">
+                <p>Issued: August 2025</p>
+                <p>Credential ID: jerMCGGqEop</p>
+                <div class="cert-skills">
+                  <span>Large Language Model Operations (LLMOps)</span>
+                  <span>BTK 2025 AI Hackathon Program</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="certificate-item">
+              <div class="cert-header">
+                <h3>Web Applications Development Training – Completion Certificate</h3>
+                <span class="cert-issuer">Artificial Intelligence and Technology Academy</span>
+              </div>
+              <div class="cert-details">
+                <p>Issued: July 2025</p>
+                <p>Credential ID: 06575740684611</p>
+                <div class="cert-skills">
+                  <span>Web Applications</span>
+                  <span>Web Development</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="certificate-item">
+              <div class="cert-header">
+                <h3>Project Initiation: Starting a Successful Project</h3>
+                <span class="cert-issuer">Coursera</span>
+              </div>
+              <div class="cert-details">
+                <p>Issued: February 2025</p>
+                <p>Expiration: March 2025</p>
+                <p>Credential ID: 8FM2V1M0BHCD</p>
+              </div>
+            </div>
+
+            <div class="certificate-item">
+              <div class="cert-header">
+                <h3>Foundations of Project Management</h3>
+                <span class="cert-issuer">Coursera</span>
+              </div>
+              <div class="cert-details">
+                <p>Issued: February 2025</p>
+                <p>Credential ID: 773RYAJB8GZ6</p>
+              </div>
+            </div>
+
+            <div class="certificate-item">
+              <div class="cert-header">
+                <h3>TÜBİTAK 4006 Science Fair Program – Participation Certificate</h3>
+                <span class="cert-issuer">TÜBİTAK</span>
+              </div>
+              <div class="cert-details">
+                <p>Issued: 2022</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+      <!-- HOBBIES BÖLÜMÜ -->
+      <section class="hobbies" id="hobiler">
+        <div class="hobbies-stars">
+          <!-- Small stars (depth: far) — 50 stars -->
+          <div class="star star-sm"></div><div class="star star-sm"></div><div class="star star-sm"></div><div class="star star-sm"></div><div class="star star-sm"></div>
+          <div class="star star-sm"></div><div class="star star-sm"></div><div class="star star-sm"></div><div class="star star-sm"></div><div class="star star-sm"></div>
+          <div class="star star-sm"></div><div class="star star-sm"></div><div class="star star-sm"></div><div class="star star-sm"></div><div class="star star-sm"></div>
+          <div class="star star-sm"></div><div class="star star-sm"></div><div class="star star-sm"></div><div class="star star-sm"></div><div class="star star-sm"></div>
+          <div class="star star-sm"></div><div class="star star-sm"></div><div class="star star-sm"></div><div class="star star-sm"></div><div class="star star-sm"></div>
+          <div class="star star-sm"></div><div class="star star-sm"></div><div class="star star-sm"></div><div class="star star-sm"></div><div class="star star-sm"></div>
+          <div class="star star-sm"></div><div class="star star-sm"></div><div class="star star-sm"></div><div class="star star-sm"></div><div class="star star-sm"></div>
+          <div class="star star-sm"></div><div class="star star-sm"></div><div class="star star-sm"></div><div class="star star-sm"></div><div class="star star-sm"></div>
+          <div class="star star-sm"></div><div class="star star-sm"></div><div class="star star-sm"></div><div class="star star-sm"></div><div class="star star-sm"></div>
+          <div class="star star-sm"></div><div class="star star-sm"></div><div class="star star-sm"></div><div class="star star-sm"></div><div class="star star-sm"></div>
+          <!-- Medium stars (depth: mid) — 40 stars -->
+          <div class="star star-md"></div><div class="star star-md"></div><div class="star star-md"></div><div class="star star-md"></div><div class="star star-md"></div>
+          <div class="star star-md"></div><div class="star star-md"></div><div class="star star-md"></div><div class="star star-md"></div><div class="star star-md"></div>
+          <div class="star star-md"></div><div class="star star-md"></div><div class="star star-md"></div><div class="star star-md"></div><div class="star star-md"></div>
+          <div class="star star-md"></div><div class="star star-md"></div><div class="star star-md"></div><div class="star star-md"></div><div class="star star-md"></div>
+          <div class="star star-md"></div><div class="star star-md"></div><div class="star star-md"></div><div class="star star-md"></div><div class="star star-md"></div>
+          <div class="star star-md"></div><div class="star star-md"></div><div class="star star-md"></div><div class="star star-md"></div><div class="star star-md"></div>
+          <div class="star star-md"></div><div class="star star-md"></div><div class="star star-md"></div><div class="star star-md"></div><div class="star star-md"></div>
+          <div class="star star-md"></div><div class="star star-md"></div><div class="star star-md"></div><div class="star star-md"></div><div class="star star-md"></div>
+          <!-- Large stars (depth: close) — 25 stars -->
+          <div class="star star-lg"></div><div class="star star-lg"></div><div class="star star-lg"></div><div class="star star-lg"></div><div class="star star-lg"></div>
+          <div class="star star-lg"></div><div class="star star-lg"></div><div class="star star-lg"></div><div class="star star-lg"></div><div class="star star-lg"></div>
+          <div class="star star-lg"></div><div class="star star-lg"></div><div class="star star-lg"></div><div class="star star-lg"></div><div class="star star-lg"></div>
+          <div class="star star-lg"></div><div class="star star-lg"></div><div class="star star-lg"></div><div class="star star-lg"></div><div class="star star-lg"></div>
+          <div class="star star-lg"></div><div class="star star-lg"></div><div class="star star-lg"></div><div class="star star-lg"></div><div class="star star-lg"></div>
+        </div>
+        <h2 class="hobbies-title">HOBBIES</h2>
+        <div class="hobbies-cards">
+          <div class="hobby-card" data-star="0">
+            <img src="./src/assets/hokey0.jpeg" alt="Ice Hockey" class="hobby-card-img" />
+            <h3>Ice Hockey</h3>
+          </div>
+          <div class="hobby-card" data-star="1">
+            <img src="./src/assets/art0.jpeg" alt="Visual Arts" class="hobby-card-img" />
+            <h3>Visual Arts</h3>
+          </div>
+          <div class="hobby-card" data-star="2">
+            <img src="./src/assets/fishing0.jpeg" alt="Fishing" class="hobby-card-img" />
+            <h3>Fishing</h3>
+          </div>
+          <div class="hobby-card" data-star="3">
+            <img src="./src/assets/kayak0.jpeg" alt="Skiing" class="hobby-card-img" />
+            <h3>Skiing</h3>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT SECTION -->
+      <section class="contact" id="iletisim">
+        <div class="contact-content">
+          <h2 class="contact-title">CONTACT</h2>
+          <div class="contact-links">
+            <a href="mailto:gediklihilanur@gmail.com" class="contact-btn">
+              <div class="btn-icon">
+                <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              </div>
+              <span class="btn-value">Email</span>
+            </a>
+            <a href="https://linkedin.com/in/hilalnurgedikli" target="_blank" class="contact-btn">
+              <div class="btn-icon">
+                <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+              </div>
+              <span class="btn-value">LinkedIn</span>
+            </a>
+            <a href="https://github.com/HilalNurGedikli" target="_blank" class="contact-btn">
+              <div class="btn-icon">
+                <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+              </div>
+              <span class="btn-value">GitHub</span>
+            </a>
+            <a href="https://hilalnur.com.tr" target="_blank" class="contact-btn">
+              <div class="btn-icon">
+                <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+              </div>
+              <span class="btn-value">Web</span>
+            </a>
+          </div>
+
+          <footer class="contact-footer">
+            <p>&copy; 2026 Hilal Nur Gedikli. All rights reserved.</p>
+          </footer>
+        </div>
+      </section>
+    </div> <!-- scroll-container bitişi -->
+  </div>
+
+  <!-- WORK OVERLAY: Menüden "WORK" linkinin üzerine fare ile gelince (hover) beliren tüm ekranı kaplayan dev kinetik yazı alanı -->
+  <div id="work-overlay" class="hidden">
+    <div class="work-content">
+      <h2 class="work-title">WORK WORK WORK WORK</h2>
+      <h2 class="work-title">WORK WORK WORK WORK</h2>
+      <h2 class="work-title">WORK WORK WORK WORK</h2>
+    </div>
+  </div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+
 </html>
